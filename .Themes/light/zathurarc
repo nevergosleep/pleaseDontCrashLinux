@@ -1,0 +1,49 @@
+set default-fg	 		"#edebec"
+set default-bg 			"#323133"
+
+set statusbar-bg		"#edebec"
+set statusbar-fg		"#323133"
+
+set inputbar-bg			"#edebec"
+set inputbar-fg			"#323133"
+
+set notification-bg		"#edebec"
+set notification-fg		"#323133"
+
+set highlight-color		"#943d6a"
+set hightlight-active-color	"#828bac"
+
+set completion-bg		"#edebec"
+set completion-fg		"#323133"
+
+set completion-highlight-bg	"#edebec"
+set completion-highlight-fg	"#323133"
+
+set tabbar-bg			"#edebec"
+set tabbar-fg			"#323133"
+
+set tabbar-focus-bg		"#323133"
+set tabbar-focus-fg		"#edebec"
+
+set index-bg			"#edebec"
+set index-fg			"#323133"
+
+set index-active-bg		"#323133"
+set index-active-fg		"#edebec"
+
+set recolor 		"true"
+set recolor-darkcolor 	"#323133"
+set recolor-lightcolor 	"#edebec"
+
+set guioptions			''
+set page-padding		"1"
+set page-cache-size		"2000"
+set scroll-full-overlap		"10"
+set scroll-page-aware		"true"
+set selection-clipboard		"clipboard"
+set adnust-open			"width"
+
+unmap o
+map o zoom out
+map i zoom in
+map w adjust_window width 

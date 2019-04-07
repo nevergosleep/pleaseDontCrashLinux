@@ -1,0 +1,13 @@
+Terminal
+	
+	su			login as root
+	sudo			run with root permission
+	mkdir			make a new file / directory
+	apt-get install		get and install a new package
+	mv			move a file "mv <from> <to>"
+	clear			clear the terminal
+	xrdb ~/.Xresources	reload Xresources
+	pwd			print working directory
+	touch <file>		make a empty file
+	echo "..." >> <file>	make file and enter text
+	cat <file>		read text file to terminal

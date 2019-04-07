@@ -1,0 +1,23 @@
+#!/bin/bash
+
+pgm=$(echo "Vivaldi;Inkscape;Remmina;Synaptic" | rofi -sep ";" -dmenu -i -p "Open: ")
+
+[[ -z $pgm ]] && exit
+
+if [ $pgm = "Vivaldi" ]; then
+	vivaldi-stable		
+fi
+
+if [ $pgm = "Inkscape" ]; then
+	inkscape
+fi
+
+if [ $pgm = "Remmina" ]; then
+	remmina
+fi
+
+if [ $pgm = "Synaptic" ]; then
+	urxvt -e gksudo synaptic
+fi
+
+exit 0

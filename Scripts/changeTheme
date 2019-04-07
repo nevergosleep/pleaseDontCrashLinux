@@ -1,0 +1,20 @@
+#!/bin/bash
+
+thm=$(echo "light;dark;sunset" | rofi -sep ";" -dmenu -i -p "Theme: ")
+
+[[ -z $thm ]] && exit
+
+rm ~/.Xresources
+cp ~/.Themes/$thm/.Xresources ~/.Xresources
+xrdb .Xresources
+rm ~/.config/zathura/zathurarc
+cp ~/.Themes/$thm/zathurarc ~/.config/zathura/zathurarc
+rm ~/.config/rofi/config
+cp ~/.Themes/$thm/rofi/config ~/.config/rofi/config
+rm ~/.config/compton.conf 
+cp ~/.Themes/$thm/compton.conf ~/.config/compton.conf
+rm ~/.config/i3/config
+cp ~/.Themes/$thm/i3/config ~/.config/i3/config
+i3 restart
+
+exit 0

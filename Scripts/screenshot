@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo Screenshot name: 
+
+read name
+
+import ~/Screenshots/$name.png
+
+echo Might have saved your file in $name , might not have

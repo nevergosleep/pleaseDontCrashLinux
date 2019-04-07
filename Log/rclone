@@ -1,0 +1,18 @@
+# remotes
+	schoolDrive	tpinion@vols.utk.edu (Always use /Home to avoid Eng Backpack)
+
+# Tree display of Drive
+	rclone tree schoolDrive:/Home
+
+# Copy a file
+	rclone copy PATH/TO/FILE schoolDrive:/Home
+	rclone copy schoolDrive:/Home/file PATH/TO/FILE
+
+# Move a file
+	rclone move
+
+# Delete a file
+	rclone delete
+
+# Purge director
+	rclone purge

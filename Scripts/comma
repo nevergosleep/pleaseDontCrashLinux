@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo no
+echo comma
+
+
+
+echo this, echo has commas

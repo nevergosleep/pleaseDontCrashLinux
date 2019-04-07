@@ -1,0 +1,19 @@
+#!/bin/bash
+
+pow=$(echo "Shutdown;Reboot;Logout" | rofi -lines 3 -sep ";" -dmenu -i -p "                                                                                                                               ")
+
+[[ -z $pow ]] && exit
+
+if [ $pow = "Shutdown" ]; then
+	systemctl poweroff
+fi
+
+if [ $pow = "Reboot" ]; then
+	systemctl reboot
+fi
+
+if [ $pow = "Logout" ]; then
+	i3-msg exit
+fi
+
+exit 0

@@ -1,0 +1,227 @@
+Fixed RTV. It needed to be updated. The newest package was only available on Debian Unstable [Sid]. Was able to upgrade using 'pip', a Python installer. First had to install PIP, then RTV
+!Had to restart computer before RTV worked!!!
+	
+"	apt install python-pip    " (for python2)
+or"     apt install python3-pip   " (for python3)
+"	pip install rtv           "
+[1116]
+
+
+
+Changed background to Water3
+Commented out the terminal startups in i3 config
+Edited i3 bar and i3 status config (~/.config/i3status.conf)
+Installed (Font Awesome) and put it in ~/.fonts
+Website for looking at Unicode Character Fonts: bluejamesbond.github.io/CharacterMap/
+
+
+Installed rofi "sudo apt install rofi"
+[1118]
+rofi config (~/.config/rofi/config)
+-This line had to be added to (compton config). Otherwise Rofi was treated as an unfocused window and therefore allways transperent. This line makes compton always consider rofi focused
+"focus-exclude = ["_NET_WM_NAME@:s = 'rofi'"];"
+Have to restart to take effect
+
+-Made 'Scripts' directory in ~
+ .wrote a script called 'hello'
+ .to make a script usable the permisions need to be changed
+	"chmod 755 PATH/TO/SCRIPT"
+ 
+-Made scripts using Rofi's dmenu to create menus for launching terminal applications and power options
+ .PowerOptions
+ .TerminalApplications
+
+--------------------------------------------------------------
+Google Drive Apps
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+ .tuxdrive -- DID NOT WORK, TOO OLD
+ 	"sudo apt install python3-pip"
+	"sudo pip3 install google-api-python-client" --this is used to authenticate G-Drive
+	*Downloaded tuxdrive.deb from github and move Packages
+	"sudo dpkg -i tuxdrive.deb" //did not work
+[1119]
+	"sudo apt install gdebi"
+[1137]
+	"sudo gdebi tuxdrive.deb" //did not workI
+
+ .gdrive -- too archaic
+	*Download gdrive for 32 bit linux
+
+ .rclone -- WINNER
+	*Download for 32bit Linux
+	"sudo cp rclone /usr/bin/"
+	"sudo chown root:root /usr/bin/rclone
+	"sudo chmod 755 /usr/bin/rclone"
+	sudo mkdir -p /usr/local/share/man/man1
+	sudo cp rclone1. /usr/local/share/man/man1/
+	sudo mandb
+	-Run rclone config (use website for help)
+	*Added GRAB to menu
+---------------------------------------------------------------
+'Fixed' vim colors by creating ~.vimrc and adding these lines
+	source $VIMTUNTIME/defaults.vim
+	colo peachpuff
+
+Also added number lines by 
+	set number 
+---------------------------------------------------------------
+Made a program launcher menu script
+	added Chromium Inkscape and Remmina
+--------------------------------------------------------------
+Commented out two lines in etc/network/interfaces that were needed for initial connection
+Doesn't seem to have changed anything
+
+Set timeout in /etc/dhcp/dhclient.conf
+this made login much faster
+----------------------------------------------------------------
+Found that the dissabled pipe error can be fixed by using a login manager
+don't mind the CLI login for now
+----------------------------------------------------------------
+Installed pulseaudio
+[1148] - doin nothing
+
+Installed synaptic
+[1152] - to launch synaptic 'gksudo synaptic'
+
+Installed alsautils
+[1154] - cool volume control (alsamixer)
+
+Installed pavucontrol
+[1160] sound now works need to config to liking doe
+
+Put keybindings for volume in i3
+
+!!!! xev !!!!! execute xev in terminal to get key press results what the computer sees
+------------------------------------------------------------------------------------------
+Touchpad config
+	sudo mkdir -p /etc/X11/xorg.conf.d
+	sudo touch /etc/X11/xorg.conf.d/90-touchpad.conf
+	sudo vim "
+
+		Section "InputClass"
+			Identifier "touchpad"
+			MatchIsTouchpad "on"
+			Driver "libinput"
+			Option "Tapping" "on"
+			Option "TappingButtonMap" "lmr"
+			Option "NaturalScrolling" "on"
+			Option "ScrollMethod" "twofinger"
+		EndSection
+------------------------------------------------------------------------------------------
+Installed youtube-dl
+[1201]
+Uninstalled it and installed it with wget
+[1201]
+	sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/bin/youtube-dl
+	sudo chmod a+rx /usr/bin/youtue-dl
+
+youtube-dl -f bestaudio <url> for music
+-----------------------------------------------------------------------------------------
+installed cmus and htop
+[1213]
+cmus is having a really hard time	
+
+Solution: Uninstalled pulse audio 
+	  Only using Alsa
+	  Configure .congig/cmus/rc
+		set output_plugin=alsa
+		set dsp.alsa.device=default
+		set mixer.alsa.device=default
+		set mixer.alsa.channel=Master
+
+Music workin Great
+[1225]
+-----------------------------------------------------------------------------------------
+paste into urxvt <shift><Ins>
+paste into vim  Insert Mode <shift><Ins>
+---------------------------------------------------------------------------------------
+added volume and cpu usage to i3status
+changed power menu title to power on/off sign
+-------------------------------------------------------------------
+Installed Vivaldi for Internet
+Installed Zathura for pdfs
+-----------------------------------------------------------------------------------
+To check default for opening pdf:
+	xdg-mime query default application/pdf
+
+Supposed to be able to change the default by edditing
+	~/.local/share/applications/mimeapps.list
+but this didn't work when opening in ranger
+
+To set default in ranger the rifle file needs to be eddited or open the file
+by pressing 'r' and ranger provides a list of choices.
+
+started working on changing zathura config in .config/zathura/zathurarc
+there is a 'man zathurarc'
+
+!!!zathura is fully configured !!!
+-----------------------------------------------------------------------------------
+ranger cannot preview images in urxvt with transparent background
+----------------------------------------------------------------------------------
+set mod+w to toggle between tabbed and tiling (split) in i3 config
+this works great when looking at images with ranger
+----------------------------------------------------------------------------------
+added internal padding to urxvt in Xresources
+---------------------------------------------------------------------------------
+changed grub timeout in /etc/defaults/grub
+then	'sudo update-grub'
+
+to get grub version
+	sudo grub-install --version
+-----------------------------------------------------------------------------------	
+removed chromium
+tried out mc file manager, it was faster than ranger but colorscheme didn't work
+mc - midnight commander
+also changed Super from windows key to Alt
+don't want to use nnn only because it's not as colorful as ranger
+-----------------------------------------------------------------------------
+to take a screenshot 
+	import NAMEOFFILE.png
+
+got screenshot script to work as well as added an option to the menu
+--------------------------------------------------------------------------------
+installed texlive-full
+
+for live preview vim needs python so installed vim-athena
+
+!!!! for some default switched to xterm in i3 changed it back to urxvt in i3 config
+-----------------------------------------------------------------------------------
+installed curl - used to download stuff
+
+installed gotop
+	git clone --depth 1 https://github.com/cjbassi/gotop.git /tmp/goto
+	/tmp/gotop/scripts/download.sh
+	echo $PATH				#Find our  paths
+	sudo mv gotop /usr/local/bin   		# Move go top to a path 
+
+uninstalled htop
+----------------------------------------------------------------------------------
+made Java directory
+installed java development kit (jdk)
+	sudo apt install openjdk-11-jdk
+----------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

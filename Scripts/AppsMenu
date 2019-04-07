@@ -1,0 +1,57 @@
+#!/bin/bash
+
+app=$(echo "Ranger;Reddit;Music;Screenshot;System;Weather;Neofetch;Grab;Volume;Internet;Network;Theme" | rofi -sep ";"  -dmenu -i -p "Terminal Application: ")
+
+[[ -z $app ]] && exit
+
+if [ $app = "Ranger" ]; then
+	urxvt -e ranger
+fi
+
+if [ $app = "Weather" ]; then
+	urxvt -e w3m wttr.in/knoxville	
+fi
+
+if [ $app = "Neofetch" ]; then
+	urxvt -e sh -c "neofetch; bash"
+fi
+
+if [ $app = "Internet" ]; then
+	urxvt -e w3m duckduckgo.com
+fi
+
+if [ $app = "Reddit" ]; then
+	urxvt -e rtv
+fi
+
+if [ $app = "Network" ]; then
+	urxvt -e nmtui
+fi
+
+if [ $app = "Grab" ]; then
+	urxvt -e rclone copy schoolDrive:/Grab ~/
+	urxvt -e rclone delete schoolDrive:/Grab
+fi
+
+if [ $app = "Volume" ]; then
+	urxvt -e alsamixer
+fi
+
+if [ $app = "Music" ]; then
+	urxvt -e cmus
+fi
+
+if [ $app = "Screenshot" ]; then
+	capture=`date +%s`
+	import ~/Screenshots/$capture.png
+fi
+
+if [ $app = "System" ]; then
+	urxvt -e gotop
+fi
+
+if [ $app = "Theme" ]; then
+	~/Scripts/changeTheme
+fi
+
+exit 0

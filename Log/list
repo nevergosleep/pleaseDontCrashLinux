@@ -1,0 +1,87 @@
+[/] Startup issue: disabled pipe
+	This could be fixed with a login manager
+
+[x] Startup issue: Raise network interfaces
+	Set timeout in /etc/dhcp/dhclient.conf
+
+[x] Get sound working
+	Needed Pulseaudio or Alsa-utils
+	Try Alsa first next time
+
+[x] i3 resize
+	Check config file (think it was because it needs px and ppt)
+
+[\] LogIn Manager
+
+[] Edit Neofetch config file
+
+[x] View images in Ranger
+
+[] Configure w3m to show images when clicked on
+
+[x] find best way to view reddit 
+	RTV
+
+[x] fix RTV
+	Needed to be updated, had to install with pip
+
+[] images clickable in RTV
+
+[\] add some space around i3 windows so everything
+    isn't right on the edge
+
+[] make a front page with conky to show weather
+    time, quotes, cpu, memory, etc
+
+[x] Hide i3 bar. Change color to all white, then make 
+    background completely transparent. Configure stuff
+	Check config for i3bar
+
+[] Set up Email Client (Alpine v Mutt v Neomutt)
+
+[x] Screenshot menu 
+
+[x] vim colorscheme
+	created vimrc
+
+[] zathura pdf with latex
+
+[] books
+
+[x] youtube-dl
+
+[] Compare Abiword, WPS, and other wordprocessers
+
+[/] Try Emacs
+
+[] Change font in LaTex (Gulliver)
+
+[] :help vimrc-intro
+
+[x] MP3 player
+	cmus
+
+[x] Make Touchpad Tap act as click
+
+[] Music Menu with options for volume (Alsa) and Visualizer
+
+[] Visualizer
+
+[x] volume in status bar
+
+[] water4 would make a great white theme
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

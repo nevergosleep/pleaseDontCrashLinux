@@ -1,0 +1,8 @@
+Remmina
+	To install:	echo 'deb http://ftp.debian.org/debian stretch-backports main' | sudo tee --append /etc/apt/sources.list.d/stretch-backports.list >> /dev/null
+			sudo apt update
+			sudo apt install -t streth-backports remmina remmina-plugin-rdp remmina-plugin-secret
+	
+	Performance:	Works well, on best quality everything looks perfect and most processes are fast
+			The only think that is slow is transition animations. Might be possible to turn 
+			off in remina settings.

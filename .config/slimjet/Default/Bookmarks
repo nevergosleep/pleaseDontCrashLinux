@@ -1,0 +1,72 @@
+{
+   "checksum": "c4b2aa6b32050c30dfc643a27da2e8c1",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13196210103684553",
+            "id": "11",
+            "name": "eBay - Discount shopping",
+            "type": "url",
+            "url": "http://rover.ebay.com/rover/1/711-53200-19255-0/1?icep_ff3=1&pub=5574949420&toolid=10001&campid=5336783799&customid=&ipn=psmain&icep_vectorid=229466&kwid=902099&mtid=824&kw=lg"
+         }, {
+            "date_added": "13196210103678670",
+            "id": "10",
+            "name": "Slimjet search",
+            "type": "url",
+            "url": "http://search.slimjet.org/"
+         }, {
+            "date_added": "13196210103673037",
+            "id": "9",
+            "name": "Book hotels & vacation rentals",
+            "type": "url",
+            "url": "http://www.booking.com/?aid=845847&sjtSource=linksbar"
+         }, {
+            "date_added": "13196210103667825",
+            "id": "8",
+            "name": "Aliexpress Shopping",
+            "type": "url",
+            "url": "http://alitems.com/g/1e8d114494d371ae616e16525dc3e8/"
+         }, {
+            "date_added": "13196210103658907",
+            "id": "7",
+            "name": "Priceline.com",
+            "type": "url",
+            "url": "https://www.priceline.com/home/?refid=PLHBC7029OPQ&refclickid=banner_srch_wide"
+         }, {
+            "date_added": "13196210103645107",
+            "id": "6",
+            "name": "Fastest VPN in the world",
+            "type": "url",
+            "url": "https://www.goldenfrog.com/vyprvpn/special/referral?offer_id=129&aff_id=2468&file_id=3820"
+         }, {
+            "date_added": "13196210103632941",
+            "id": "5",
+            "name": "Slimjet homepage",
+            "type": "url",
+            "url": "http://www.slimjet.com/"
+         } ],
+         "date_added": "13196210101762659",
+         "date_modified": "13196210103684553",
+         "id": "1",
+         "name": "Bookmarks bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13196210101762698",
+         "date_modified": "0",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13196210101762721",
+         "date_modified": "0",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

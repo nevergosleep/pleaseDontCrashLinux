@@ -1,0 +1,37 @@
+#define bg    #edebec
+#define blk   #edebec
+#define fg    #3e2545
+#define bblk  #323133
+#define red   #943d6a
+#define grn   #8a96ae
+#define ylw   #947988
+#define blu   #513e76
+#define mag   #943d6a
+#define cyn   #828bac
+#define wht   #dbd1cf
+
+
+! Colors
+ *background:   bg
+ *foreground:   fg
+ *cursorColor:  mag
+
+ *color0:      blk
+ *color8:      bblk
+ *color1:      red
+ *color9:      red
+ *color2:      grn
+ *color10:     grn
+ *color3:      ylw
+ *color11:     ylw
+ *color4:      blu
+ *color12:     blu
+ *color5:      mag
+ *color13:     mag
+ *color6:      cyn
+ *color14:     cyn
+ *color7:      wht
+ *color15:     wht
+
+URxvt.scrollBar: false
+URxvt.internalBorder: 20
