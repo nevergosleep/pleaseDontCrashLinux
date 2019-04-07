@@ -201,9 +201,20 @@ installed java development kit (jdk)
 	sudo apt install openjdk-11-jdk
 ----------------------------------------------------------------------------------
 
+Started using git
 
+make a git for the homefolder
+	-while in the home filder
+		"git init"
+		"git status"
+	-All files are listed
+		"git add <file>"
+	-once all the files that should be tracked are added create a githu repo online
+	-to push the git repo from the computer to the one online:
+		"git remote add origin https://github.com/nevergosleep/NAME_OF_REPO.git"
+		"git push -u origin master"
 
-
+------------------------------------------------------------------------------------
 
 
 
