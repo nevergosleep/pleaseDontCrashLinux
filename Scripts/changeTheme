@@ -1,6 +1,6 @@
 #!/bin/bash
 
-thm=$(echo "light;dark;sunset" | rofi -sep ";" -dmenu -i -p "Theme: ")
+thm=$(echo "light;dark;dark_solid;sunset" | rofi -sep ";" -dmenu -i -p "Theme: ")
 
 [[ -z $thm ]] && exit
 

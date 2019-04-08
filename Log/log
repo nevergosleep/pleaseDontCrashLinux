@@ -214,8 +214,17 @@ make a git for the homefolder
 		"git remote add origin https://github.com/nevergosleep/NAME_OF_REPO.git"
 		"git push -u origin master"
 
+accidentally addid a file that didn't need to be tracked (vivaldi config file)
+	"git rm -r --cached ~/PATH TO FILE
 ------------------------------------------------------------------------------------
+List all xft monospace fonts
+	> fc-list :spacing=100 | sort
 
+Open a terminal in new font
+	> urxvt -fn "xft:Noto Mono-10"
+
+To check out X11 fonts
+	> xfontsel
 
 
 
